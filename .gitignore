@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+ENV/
+*.json.report
+audit_results.json
+security_audit_report.json
+test_run_report.json
+.DS_Store

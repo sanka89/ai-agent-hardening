@@ -82,5 +82,15 @@ For teams needing auditor-approved compliance documentation to pass SOC 2 Type I
 
 ---
 
+## 💰 Affiliate Program (Earn 30% Commission)
+
+Do you write an AI newsletter, maintain developer tools, or create cybersecurity content? 
+
+Join our official affiliate program and earn **30% commission ($45+ per sale)** on every referral:
+
+👉 **[Apply to the Affiliate Program on Lemon Squeezy](https://atlasagent.lemonsqueezy.com/affiliates)**
+
+---
+
 ## 📄 License
 This open-source core is licensed under the [MIT License](LICENSE).

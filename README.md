@@ -3,9 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://python.org)
 [![OWASP LLM Top 10](https://img.shields.io/badge/Security-OWASP%20LLM%20Top%2010-red.svg)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-[![MITRE ATLAS](https://img.shields.io/badge/Mapped-MITRE%20ATLAS-orange.svg)](https://atlas.mitre.org)
+[![Live Web Scanner](https://img.shields.io/badge/⚡_Live_Web_Scanner-Try_Online-success)](https://sanka89.github.io/ai-agent-hardening/)
 
 An open-source security linter and system prompt defense architecture designed to protect autonomous AI agents, LLM applications, and Model Context Protocol (MCP) tools from Direct Prompt Injections (DPI), tool poisoning, and prompt extraction.
+
+👉 **[Launch Interactive Web Scanner Online](https://sanka89.github.io/ai-agent-hardening/)** — Test your system prompts against OWASP LLM vulnerabilities in your browser with zero installation.
 
 ---
 

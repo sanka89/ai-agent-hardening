@@ -1,0 +1,25 @@
+name: 'AI Agent Security & Hardening Linter'
+description: 'Automated CI/CD security scanner for autonomous AI agents, prompt injection defense, and OWASP LLM Top 10 compliance.'
+author: 'AtlasAgent'
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+inputs:
+  suite_file:
+    description: 'Path to custom adversarial test suite JSON'
+    required: false
+    default: 'sample_adversarial_suite.json'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Run Adversarial Test Suite
+      shell: bash
+      run: |
+        python ${{ github.action_path }}/test_agent_security.py --suite ${{ github.action_path }}/${{ inputs.suite_file }}

@@ -513,6 +513,125 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
+        /* Two-Tier Pricing Grid */
+        .pricing-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .pricing-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+        }
+
+        .pricing-card.premium {
+            border-color: rgba(129, 140, 248, 0.4);
+            box-shadow: 0 10px 30px rgba(129, 140, 248, 0.1);
+        }
+
+        .pricing-card-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .pricing-card-badge.green {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-emerald);
+        }
+
+        .pricing-card-badge.purple {
+            background: rgba(129, 140, 248, 0.15);
+            color: var(--accent-purple);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.35rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .pricing-card .price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card .price span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .pricing-features-list {
+            list-style: none;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+
+        .pricing-features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .btn-card-action {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 14px 20px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .btn-card-green {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-card-purple {
+            background: linear-gradient(135deg, #818cf8 0%, #4f46e5 100%);
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-card-action:hover {
+            transform: translateY(-2px);
+        }
+
         footer {
             text-align: center;
             padding: 40px 0;
@@ -534,7 +653,8 @@
         <div class="nav-links">
             <a href="https://github.com/sanka89/ai-agent-hardening" target="_blank">GitHub Repo</a>
             <a href="https://dev.to/sanka89/how-to-harden-ai-agents-against-prompt-injections-tool-poisoning-open-source-guide-1ic5" target="_blank">Documentation</a>
-            <a href="https://atlasagent.lemonsqueezy.com/checkout/buy/74878ea9-8bf1-4b86-8a6c-f32c6334c18f" target="_blank" style="color: var(--accent-blue);">Enterprise Kit</a>
+            <a href="https://atlasagent.lemonsqueezy.com/checkout/buy/74878ea9-8bf1-4b86-8a6c-f32c6334c18f" target="_blank" style="color: var(--accent-blue);">Enterprise Kit ($149)</a>
+            <a href="mailto:atlasagent.sec@gmail.com?subject=Custom%20AI%20Agent%20Security%20Audit%20Inquiry%20($499)" style="color: var(--accent-purple); font-weight: 700;">Custom Audit ($499)</a>
         </div>
     </nav>
 
@@ -603,22 +723,48 @@
                 <!-- Injected via JavaScript -->
             </div>
 
-            <!-- Upsell Paywall Box -->
-            <div class="paywall-box">
-                <h3>🚀 Enterprise AI Hardening & Audit Kit</h3>
-                <p>Need to pass formal vendor security reviews? Get the full 20+ page auditor-vetted ISO 42001 & SOC 2 questionnaires, XML defense architectures, and adversarial test runner.</p>
-                
-                <div class="paywall-features">
-                    <div class="paywall-item">✓ Complete 20+ Vendor Security Questionnaire Answers</div>
-                    <div class="paywall-item">✓ Production XML Delimiter & Canary Token Schemas</div>
-                    <div class="paywall-item">✓ CI/CD Automated GitHub Action Scanner</div>
+            <!-- Two-Tier Pricing / Engagement Grid -->
+            <div class="pricing-cards-grid">
+                <!-- Tier 1: Self-Serve Enterprise Kit -->
+                <div class="pricing-card featured">
+                    <div>
+                        <span class="pricing-card-badge green">Self-Serve Digital Kit</span>
+                        <h3>Enterprise Hardening Kit</h3>
+                        <p>Complete compliance blueprints and defense specs to pass corporate vendor security reviews.</p>
+                        <div class="price">$149 <span>/ one-time</span></div>
+                        <ul class="pricing-features-list">
+                            <li><span>✓</span> 20+ Auditor-vetted Questionnaire Answers (ISO 42001, SOC 2 CC6.8, EU AI Act)</li>
+                            <li><span>✓</span> Production XML Delimiter & System Boundary Specs</li>
+                            <li><span>✓</span> Reusable CI/CD GitHub Action Security Scanner</li>
+                            <li><span>✓</span> Instant automated ZIP download upon payment</li>
+                        </ul>
+                    </div>
+                    <a href="https://atlasagent.lemonsqueezy.com/checkout/buy/74878ea9-8bf1-4b86-8a6c-f32c6334c18f" target="_blank" class="btn-card-action btn-card-green">
+                        Unlock Enterprise Kit ($149) ➔
+                    </a>
                 </div>
 
-                <a href="https://atlasagent.lemonsqueezy.com/checkout/buy/74878ea9-8bf1-4b86-8a6c-f32c6334c18f" target="_blank" class="btn-upgrade">
-                    <span>Unlock Enterprise Kit ($149)</span>
-                    <span>⚡</span>
-                </a>
-                <br>
+                <!-- Tier 2: Done-For-You Custom Audit -->
+                <div class="pricing-card premium">
+                    <div>
+                        <span class="pricing-card-badge purple">Full Done-For-You Service</span>
+                        <h3>Custom Security Audit</h3>
+                        <p>Hand-crafted adversarial penetration testing, customized prompt hardening, and formal executive threat reporting.</p>
+                        <div class="price">$499 <span>/ audit</span></div>
+                        <ul class="pricing-features-list">
+                            <li><span>✓</span> 50+ Custom Adversarial Prompt Injection & Tool Probes</li>
+                            <li><span>✓</span> Formal 15-Page Executive Threat Report & Security Certificate</li>
+                            <li><span>✓</span> Tailored System Prompt & MCP Schema Hardening</li>
+                            <li><span>✓</span> 48-Hour Fast-Track Turnaround & Direct Engineering Review</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:atlasagent.sec@gmail.com?subject=Custom%20AI%20Agent%20Security%20Audit%20Inquiry%20($499)&body=Hi%20Sanka%2C%0A%0AWe%20would%20like%20to%20request%20a%20custom%20AI%20agent%20security%20audit%20and%20threat%20report%20for%20our%20agent.%0A%0ACompany%20/%20Product%20Name%3A%20%0AAgent%20URL%20or%20Demo%3A%20%0AAgent%20Framework%20(e.g.%20LangChain%2C%20LlamaIndex%2C%20Custom)%3A%20%0ATarget%20Deadline%3A%20%0A%0AThanks!" class="btn-card-action btn-card-purple">
+                        Request Custom Audit ($499) ➔
+                    </a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 25px;">
                 <a href="https://github.com/sanka89/ai-agent-hardening" target="_blank" class="secondary-btn">
                     ⭐ View Open-Source Companion Repo on GitHub
                 </a>
